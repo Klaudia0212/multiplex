@@ -30,7 +30,7 @@ public class Cinema {
        }
 
        for (Screening s : cinemaScreenings) {
-           LocalDate d = s.getDay(); // albo s.getStart().toLocalDate()
+           LocalDate d = s.getDay();
            if (!d.isBefore(from) && d.isBefore(end)) {
                System.out.println(s);
            }
