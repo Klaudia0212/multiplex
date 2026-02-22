@@ -45,11 +45,11 @@ public class Auditorium {
     private Zone pickZone(int rowIndex, int totalRows) {
         int vipRows = Math.max(1, (int) Math.round(totalRows * 0.15));
         int standardRows = Math.max(1, (int) Math.round(totalRows * 0.45));
-        int promoRows = Math.max(0, totalRows - vipRows - standardRows); // reszta
+        int promoRows = Math.max(0, totalRows - vipRows - standardRows);
 
-        int vipEnd = vipRows;                 // [0, vipEnd)
-        int standardEnd = vipEnd + standardRows; // [vipEnd, standardEnd)
-        int promoEnd = standardEnd + promoRows;  // reszta
+        int vipEnd = vipRows;
+        int standardEnd = vipEnd + standardRows;
+        int promoEnd = standardEnd + promoRows;
 
         if (rowIndex < vipEnd) return Zone.VIP;
         if (rowIndex < standardEnd) return Zone.STANDARD;
